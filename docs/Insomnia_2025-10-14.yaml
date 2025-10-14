@@ -1,0 +1,139 @@
+type: collection.insomnia.rest/5.0
+name: Loja espricio
+meta:
+  id: wrk_5a60ad3f37c749bf9ff65d398aac25d3
+  created: 1759864401226
+  modified: 1760446700913
+  description: ""
+collection:
+  - name: clientes
+    meta:
+      id: fld_d2e2a8bb3c3344e08ddcc7454a326fca
+      created: 1760442520642
+      modified: 1760442534266
+      sortKey: -1760442520642
+      description: ""
+    children:
+      - url: http://localhost:8081/clientes
+        name: New Request
+        meta:
+          id: req_32d1efb28ae0408e97026176ec230c43
+          created: 1759864413292
+          modified: 1760445216531
+          isPrivate: false
+          description: ""
+          sortKey: -1760442531050
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"nomeCliente":"liviabest",
+            	"cpfCliente":"12445678998"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/clientes
+        name: New Request
+        meta:
+          id: req_37253badf51a46f498db92fc10a5626b
+          created: 1760442485492
+          modified: 1760442530972
+          isPrivate: false
+          description: ""
+          sortKey: -1760442530950
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: produtos
+    meta:
+      id: fld_4f743b806f9a4dd789b3e53dea864a35
+      created: 1760445265277
+      modified: 1760445265277
+      sortKey: -1760445265277
+      description: ""
+    children:
+      - url: http://localhost:8081/produtos
+        name: New Request
+        meta:
+          id: req_d6074da776f747c3a0b377697f40fac4
+          created: 1760445269607
+          modified: 1760445362715
+          isPrivate: false
+          description: ""
+          sortKey: -1760445269607
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/produtos
+        name: New Request
+        meta:
+          id: req_1548443de034448fbeac698b67cf2779
+          created: 1760445371286
+          modified: 1760445444272
+          isPrivate: false
+          description: ""
+          sortKey: -1760445371286
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nomeProduto": "pera",
+            		"precoProduto": 6.00
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_c196b90e5a9c355ec598efd5ab0b8b6fba72d1d2
+    created: 1759864401236
+    modified: 1759864401236
+environments:
+  name: Base Environment
+  meta:
+    id: env_c196b90e5a9c355ec598efd5ab0b8b6fba72d1d2
+    created: 1759864401233
+    modified: 1759864401233
+    isPrivate: false
