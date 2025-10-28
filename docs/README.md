@@ -87,3 +87,4 @@
     "message":"Cliente deletado com sucesso!"
 }
 ```
+### Pedidos

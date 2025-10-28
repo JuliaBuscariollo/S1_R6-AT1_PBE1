@@ -18,7 +18,7 @@ const clienteModel = {
       let querySQL = "SELECT * FROM Clientes WHERE cpfCliente = @cpfCliente;";
       const result = await pool
         .request()
-        .input("cpfCliente", sql.VarChar(11), cpfCliente)
+        .input("cpfCliente", sql.Char(11), cpfCliente)
         .query(querySQL);
 
       return result.recordset;
@@ -31,11 +31,11 @@ const clienteModel = {
     try {
       const pool = await getConnection();
 
-      const querySQL = `SELECT * FROM clientes WHERE idCliente = @idClientes`;
+      const querySQL = `SELECT * FROM clientes WHERE idCliente = @idCliente`;
 
       const result = await pool
         .request()
-        .input(`idClientes`, sql.UniqueIdentifier, idCliente)
+        .input(`idCliente`, sql.UniqueIdentifier, idCliente)
         .query(querySQL);
 
       return result.recordset;
